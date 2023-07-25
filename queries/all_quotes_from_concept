@@ -1,0 +1,5 @@
+#!/bin/bash
+
+choose_concept=$(gum choose $(echo "select concept from serious" | sqlite3 quotes.db))
+
+echo "select quote from serious where concept = '$choose_concept'" | sqlite3 quotes.db
