@@ -27,7 +27,9 @@ add_quote() {
 END
 else
     cat <<END | sqlite3 quotes.db
-    INSERT INTO serious (quote, who, concept) VALUES ('$1', '$2', '$3') 
+    INSERT INTO serious (quote, who, concept) VALUES ('$1', '$2', '$3')
+    quote=$1
 END
     fi
+git commit -m "add quote: '$quote'"
 }
