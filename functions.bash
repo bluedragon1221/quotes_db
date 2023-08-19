@@ -31,5 +31,6 @@ else
     quote=$1
 END
     fi
+git add .
 git commit -m "add quote: '$quote'"
 }
